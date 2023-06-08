@@ -1,0 +1,19 @@
+<%- include("partials/header") -%>
+
+<body>
+  <div class="greetLine">
+    <h1>Hi Guys, Welcome to Geeks Blogs</h1>
+    <p><%= StartingContent %></p>
+  </div>
+
+  <div class="greetLine">
+    <% StartingPosts.forEach(function(post){ %>
+    <h1> <%= post.Title %> </h1>
+    <p> <%= post.content.substring(0,100)+"..." %>
+      <a href="posts/<%=post.Title%>">Read More</a>
+    </p>
+    <% }) %>
+  </div>
+
+</body>
+<%- include("partials/footer") -%>
